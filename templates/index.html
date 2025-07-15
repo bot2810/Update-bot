@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin & Win</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- ব্যানার এড -->
+        <div class="banner-ad">
+            <img src="static/img/ad-banner.png" alt="Advertisement">
+        </div>
+        
+        <!-- প্রোফাইল সেকশন -->
+        <div class="profile-section">
+            <img id="profile-pic" src="static/img/default-profile.png" alt="Profile">
+            <div>
+                <h2 id="user-name">User Name</h2>
+                <p id="user-balance">Balance: ₹0.00</p>
+                <p id="spins-left">Spins left today: 20</p>
+            </div>
+        </div>
+        
+        <!-- স্পিন হুইল -->
+        <div class="spin-wheel-container">
+            <div class="wheel" id="wheel">
+                <div class="wheel-center"></div>
+            </div>
+            <button id="spin-btn" class="spin-btn">SPIN</button>
+        </div>
+        
+        <!-- উইথড্রয়াল ফর্ম -->
+        <div class="withdrawal-form">
+            <h3>Withdraw Money</h3>
+            <input type="number" id="withdraw-amount" placeholder="Amount (min ₹5)" step="0.01" min="5">
+            <input type="text" id="upi-id" placeholder="UPI ID">
+            <button id="withdraw-btn">Request Withdrawal</button>
+        </div>
+        
+        <!-- ফুটার এড -->
+        <div class="banner-ad">
+            <img src="static/img/ad-banner.png" alt="Advertisement">
+        </div>
+    </div>
+    
+    <!-- রিওয়ার্ড পপআপ -->
+    <div id="reward-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Congratulations!</h2>
+            <p>You won: <span id="reward-amount">₹0.00</span></p>
+            <div id="special-offer" style="display:none;">
+                <p>Special offer: Install an app to get double reward!</p>
+                <button id="install-offer-btn">Install Now</button>
+            </div>
+            <button id="watch-ad-btn">Watch Ad to Claim (60s)</button>
+        </div>
+    </div>
+    
+    <script src="static/js/script.js"></script>
+</body>
+</html>
