@@ -1,0 +1,250 @@
+/* জেনারেল স্টাইল */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.container {
+    max-width: 100%;
+    padding: 15px;
+}
+
+/* হেডার স্টাইল */
+.header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* প্রোফাইল সেকশন */
+.profile-section {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid #6e8efb;
+}
+
+.user-info h2 {
+    margin: 0;
+    color: #444;
+}
+
+.user-balance {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6e8efb;
+}
+
+/* স্পিন হুইল স্টাইল */
+.spin-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.wheel {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: conic-gradient(
+        #ff7675, #fdcb6e, #00b894, #0984e3, #6c5ce7, #fd79a8, #ff7675
+    );
+    position: relative;
+    transition: transform 3s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+    transform: rotate(0deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.wheel-center {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.spin-btn {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.spin-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.spin-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* উইথড্রয়াল ফর্ম */
+.withdrawal-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.withdrawal-form h3 {
+    margin-top: 0;
+    color: #444;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+/* এড ব্যানার স্টাইল */
+.ad-banner {
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ad-banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* পপআপ স্টাইল */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    animation: popupOpen 0.3s ease-out;
+}
+
+@keyframes popupOpen {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.popup h2 {
+    color: #6e8efb;
+    margin-top: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #777;
+}
+
+.reward-amount {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00b894;
+    margin: 15px 0;
+}
+
+.ad-btn {
+    background: #0984e3;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.offer-btn {
+    background: #a777e3;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* রেস্পন্সিভ ডিজাইন */
+@media (min-width: 768px) {
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .wheel {
+        width: 320px;
+        height: 320px;
+    }
+}
